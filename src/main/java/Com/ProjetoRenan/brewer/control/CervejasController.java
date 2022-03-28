@@ -20,14 +20,18 @@ public class CervejasController {
 	}
 	
 	@RequestMapping(value = "/cervejas/novo", method = RequestMethod.POST)
-	public String cadastrar(@Valid cerveja cerveja ,BindingResult result, Model model, RedirectAttributes attributes ) {
+	public String cadastrarCerveja(@Valid cerveja cerveja ,BindingResult result, Model model, RedirectAttributes attributes ) {
 		if (result.hasErrors()) {
 			model.addAttribute("mensagem", "Erro no formulário");
 			return "cerveja/CadastroCerveja";
+			
 		}
 		
 		attributes.addFlashAttribute("mensagem", "Cerveja salva com sucesso");
 		System.out.println(">> sku: " + cerveja.getSku());
 		return "redirect:/cervejas/novo";
-	} 
+		
+	
+	    } 
+		
 }
