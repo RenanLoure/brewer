@@ -10,21 +10,27 @@
 </body>
 
 
-    <form method="POST">
+    <form method="POST" th:object ="${cerveja}">
+        
+        <div th:each="erro : ${#fields.detailedErrors()}">
+             <span th:text="${erro.message}"></span>
+        </div>
+    
         <span th:text="${mensagem}">ERRO!</span>
         <br>
+        
         <label for="sku">SKU</label>
-        <input type="text" id="sku" name="sku">
+        <input type="text" id="sku" th:field="*{sku}">
        
         <br>
         
          <label for="sku">NOME</label>
-        <input type="text" id="Nome" name="Nome">
+        <input type="text" id="Nome" th:field="*{nome}">
         
         <br>
         
-         <label for="sku">DESCRICAO</label>
-        <textarea rows="3" cols="30" id ="descricao" name="descricao"></textarea>
+        <label for="sku">DESCRICAO</label>
+        <textarea rows="3" cols="30" id ="descricao" th:field ="*{descricao}"></textarea>
         <br>
                 
         <input type="submit" value="Salvar">

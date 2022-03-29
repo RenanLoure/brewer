@@ -15,15 +15,14 @@ import Com.ProjetoRenan.brewer.model.cerveja;
 public class CervejasController {
 	
 	@RequestMapping("/cervejas/novo")
-	public String novo() {
+	public String novo(cerveja cerveja) {
 		return "cerveja/CadastroCerveja";
 	}
 	
 	@RequestMapping(value = "/cervejas/novo", method = RequestMethod.POST)
 	public String cadastrarCerveja(@Valid cerveja cerveja ,BindingResult result, Model model, RedirectAttributes attributes ) {
 		if (result.hasErrors()) {
-			model.addAttribute("mensagem", "Erro no formulário");
-			return "cerveja/CadastroCerveja";
+			return novo(cerveja);
 			
 		}
 		
