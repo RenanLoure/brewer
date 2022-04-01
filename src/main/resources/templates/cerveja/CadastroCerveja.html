@@ -29,55 +29,53 @@
 	  <div class="container-fluid">
 
 	     <div class="navbar-header">
-	       <a class="navbar-brand  hidden-xs" href="#">
+	         <a class="navbar-brand  hidden-xs" href="#">
 	         <img alt="AlgaWorks" src="/brewer/images/logo.png"/>
-	       </a>
-
+	         </a>
+  
 	       <ul class="nav  navbar-nav">
-	         <li>
+	           <li>
 	           <a href="#" class="js-sidebar-toggle"><i class="fa  fa-bars"></i></a>
-	         </li>
+	          </li>
 	       </ul>
-	      </div>
+	    </div>
 
 	    <ul class="nav navbar-nav  navbar-right">
-	      
 	       <li>
 	         <a href="#"><em class="fa  fa-sign-out"></em></a>
 	       </li> 
 	    </ul>
 
 	  </div>
+	  
 	</nav>
-	
-	<aside class="aw-layout-sidebar  js-sidebar">
-		<div class="aw-layout-sidebar__content">
+	     <aside class="aw-layout-sidebar  js-sidebar">
+		  <div class="aw-layout-sidebar__content">
 
-      <nav class="aw-menu  js-menu">
-        <ul class="aw-menu__list">
+         <nav class="aw-menu  js-menu">
+             <ul class="aw-menu__list">
+                <li class="aw-menu__item">
+                <a href="dashboard.html"><i class="fa  fa-fw  fa-home"></i><span>Dashboard</span></a>
+              </li>
 
-           <li class="aw-menu__item">
-              <a href="dashboard.html"><i class="fa  fa-fw  fa-home"></i><span>Dashboard</span></a>
-           </li>
-
-            <li class="aw-menu__item  is-active">
-            <a href="#">
-               <i class="fa  fa-fw  fa-file-text"></i><span>Cadastros</span>
-               <i class="aw-menu__navigation-icon  fa"></i>
-            </a>
+              <li class="aw-menu__item  is-active">
+                 <a href="#">
+                 <i class="fa  fa-fw  fa-file-text"></i><span>Cadastros</span>
+                 <i class="aw-menu__navigation-icon  fa"></i>
+                 </a>
          
-          <ul class="aw-menu__list  aw-menu__list--sublist">
-            <li class="aw-menu__item  aw-menu__item--link"><a href="cadastro-produto.html">Cadastro de produto</a></li>
-            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="pesquisa-produtos.html">Pesquisa de produtos</a></li>
-            <li class="aw-menu__item  aw-menu__item--link"><a href="tabela-sem-dados.html">Tabela sem dados</a></li>
-          </ul>
-        </li>
+                  <ul class="aw-menu__list  aw-menu__list--sublist">
+                    <li class="aw-menu__item  aw-menu__item--link"><a href="cadastro-produto.html">Cadastro de produto</a></li>
+                    <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="pesquisa-produtos.html">Pesquisa de produtos</a></li>
+                    <li class="aw-menu__item  aw-menu__item--link"><a href="tabela-sem-dados.html">Tabela sem dados</a></li>
+                 </ul>
+            </li>
 
         <li class="aw-menu__item  is-expanded">
-          <a href="#">
-            <i class="fa  fa-fw  fa-file-text"></i><span>Páginas comuns</span>
-            <i class="aw-menu__navigation-icon  fa"></i>
-          </a>
+            <a href="#">
+             <i class="fa  fa-fw  fa-file-text"></i><span>Páginas comuns</span>
+             <i class="aw-menu__navigation-icon  fa"></i>
+            </a>
 
           <ul class="aw-menu__list  aw-menu__list--sublist">
             <li class="aw-menu__item  aw-menu__item--link"><a href="pagina-vazia.html">Página vazia</a></li>
@@ -143,7 +141,7 @@
 					</select>
 				</div>
 			</div>	
-		</div>
+		
 			
 			<div class="col-sm-3 form-group">
 					<label for="sabor">Sabor</label>
@@ -177,7 +175,8 @@
 					     <label>Internacional</label>
 					</div>
 				</div>
-			    </div>
+			 </div>
+		</div>
 			     
 			     
 			     <div class="row">
@@ -188,9 +187,25 @@
 					      <input id="preco" type="text" class="form-control"/>
 					   </div>
 			         </div>
+			     
+			    
+			    <div class="col-sm-3 form-group">
+			       <div class="form-group">
+					  <label for="comissao">Comissão</label>
+					      <div class="input-group">
+					         <input id="comissao" type="text" class="form-control"/>
+					      <div class="input-group-addon">%</div>
+					    </div>
+					 </div>
 			     </div>
 			     
-		  
+			     <div class="col-sm-3 form-group">
+			       <div class="form-group">
+					  <label for="estoque">Estoque</label>
+					        <input id="estoque" type="text" class="form-control"/>
+					 </div>
+			     </div>
+		    </div>
 		
 		<div class="form-group">
 			<button class="btn  btn-primary" type="submit">Salvar</button>

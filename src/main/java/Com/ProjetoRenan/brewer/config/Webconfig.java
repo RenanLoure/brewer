@@ -45,6 +45,8 @@ public class Webconfig extends WebMvcConfigurerAdapter implements ApplicationCon
 		SpringTemplateEngine engine = new SpringTemplateEngine();
 		engine.setEnableSpringELCompiler(true);
 		engine.setTemplateResolver(templateResolver());
+		
+		
 		return engine;
 	}
 	
